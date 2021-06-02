@@ -1,0 +1,247 @@
+.container {
+  max-width: 960px;
+}
+
+/*
+ * Custom translucent site header
+ */
+
+.site-header {
+  background-color: #fff;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: #8e8e8e;
+  transition: color .15s ease-in-out;
+  font-weight: 500;
+  text-decoration: none;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.site-header a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+/*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+.product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  transform: rotate(30deg);
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 5px;
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #e5e5e5;
+}
+
+
+/*
+ * Extra utilities
+ */
+
+.flex-equal > * {
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    flex: 1;
+  }
+}
+
+.container.row.todo-list{
+  margin:auto !important;
+}
+span.badge.bg-light{
+color: #000;
+margin-left:10px;
+}
+
+.topbanner-class{
+  background: url('../static/img/header-x1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 433px;
+}
+.title-banner{
+  color:#fff;
+  position: absolute;
+  left: 100px;
+  bottom: 50px;
+}
+.coins-badge{
+  background: #ededed;
+  color: #a3a3a3;
+  border-radius: 25px;
+  padding: 10px;
+  cursor: pointer;
+}
+body{
+  background: #f9f9f9;
+}
+.loader {
+  margin-top: 20px;
+}
+.filters{
+  line-height: 65px;
+  display: inline;
+}
+
+.coins-badge.filter-active{
+  background:#0ad4fa;
+  color: #fff;
+}
+.filter-pagination{
+  display: inline;
+  color: #616161;
+  font-weight: 100;
+  margin-left: 60px;
+  margin: auto 60px;
+  line-height: 65px;
+}
+.vertical-separator{
+  padding: 10px 5px;
+  border-left: 1px solid #ccc;
+  margin-left: 5px;
+}
+.horizontal-separator{
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  display: block;
+}
+.selectors{
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+.card-text.category{
+  font-size: 12px;
+  color: #a3a3a3;
+  text-align: left;
+  line-height: 14px;
+  margin: 0px;
+}
+.card-text.item-name{
+  font-size: 18px;
+  color: #616161;
+  text-align: left;
+}
+div.card{
+  margin-bottom: 25px;
+}
+
+.hover-details{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  transform: translate(-50%,-50%);
+  background-image: linear-gradient(-180deg, #0ad4fa8f, #25bbf1a3);
+  width:100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+.card:hover .hover-details{
+  visibility: visible;
+}
+.card.claimed .hover-details{
+  visibility: visible;
+}
+.card.claimed .hover-details .price-details{
+  text-decoration: line-through;
+}
+.hover-details .details-centered{
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.price-details{
+  color: #fff;
+  font-weight: 400;
+  margin: 0px;
+  font-size: 24px;
+}
+button.redeem{  
+  background: #fff;
+  border: none;
+  color: #616161;
+  font-size: 20px;
+  font-weight: 300;
+  border-radius: 25px;
+  padding: 10px 45px;
+  z-index: 100;
+}
+.card.shadow-sm:after {
+  content: ' ';
+  background: url("./../static/icons/buy-blue.svg") no-repeat;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+}
+.card.shadow-sm:hover:after {
+  background: url("./../static/icons/buy-white.svg");
+}
+
+img.pagination-arrows.left-arrow {
+  position: absolute;
+  left: 0px;
+  top: 10px;
+
+}
+
+img.pagination-arrows.right-arrow {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+}
+
+.card.shadow-sm.disabled:after {
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  background: #cccccc91;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+@media screen and (max-width: 689px) {
+  .filters{
+    display: block;
+  }
+  .selectors .vertical-separator{
+    border:none;
+  }
+  .selectors{
+    text-align: center;
+  }
+}
